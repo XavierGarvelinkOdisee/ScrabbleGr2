@@ -258,7 +258,6 @@ function switchPlayerTurn() {
 
 function LoadPlayer(playerIndex) {
     eersteletterbool = true;
-    console.log(eersteletterbool);
     if (playerLetters[playerIndex].length < 7) {
         distributeLetterTilesToPlayer(letTiles, 7-playerLetters[playerIndex].length).forEach(element => {
             playerLetters[playerIndex].push(element);
@@ -281,7 +280,7 @@ function LoadPlayer(playerIndex) {
 function updatePlayerTurn(playerIndex) {
     divPlayerTurn.removeChild(divPlayerTurn.firstChild);
     let playerTurn = document.createElement('p');
-    playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name}`;
+    playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name} punten: ${playerScores[playerIndex]}`;
     divPlayerTurn.appendChild(playerTurn);
 }
 
@@ -602,33 +601,6 @@ btnEinde.addEventListener('click', function() {
     n--;
   } while (swapped);
     
-  loginButtonClick(players[0].name, playerspw[0].pw);
-  window.alert(`${players[0].name} heeft gewonnen, met ${playerScores[0]}`);
+  window.alert(`${players[0].name} heeft gewonnen, met ${playerScores[0]} punten`);
 });
 
-// code gekregen van Senne Cools
-async function loginButtonClick(email, password) {
-    var formdata = new FormData();
-    formdata.append("identity", email);
-    formdata.append("password", password);
-    
-    var requestOptions = {
-      method: 'POST',
-      body: formdata,
-      redirect: 'follow'
-    };
-    
-    fetch("https://lucas-miserez.be/api/collections/person/auth-with-password", requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        if (result.record?.verified) {
-          console.log('login success');
-        } 
-        else {
-          // als login fout is code
-        }
-        
-      })
-      .catch(error => console.log('error', error));
-  }
