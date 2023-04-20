@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="maincontent">
+        <header>
+            <h1>Scrabble</h1>
+        </header>
+        <div id="login">
+            <h2>Get ready to test your vocabulary - welcome to Scrabble!</h2>
+            <div id="selectlangplayer">
+                <label for="player-count">Select amount of players:</label>
+                <select id="player-count" name="player-count">
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <label for="language">Select language:</label>
+                <select name="language" id="language">
+                    <option value="NL">NL</option>
+                    <option value="FR">FR</option>
+                </select>
+            </div>
+            <div id="players">
+                <label for="player1" class="player1">Name player 1:</label>
+                <input type="text" id="player1">
+                <label for="player1" class="player1">Password player 1:</label>
+                <input type="password" id="player1pw">
+                <label for="player2" class="player2">Name player 2:</label>
+                <input type="text" id="player2">
+                <label for="player2" class="player2">Password player 2:</label>
+                <input type="password" id="player2pw">
+            </div>
+            <button type="button" value="Start" id="btnStart">Start</button>
+        </div>
+        <div id="playerinfo">
+            <p class="hide">Score: </p>
+            <div id="playerturn">
+        </div>
+        <div id="letterlist">
+        </div>
+    <div id="btns">
+        <button class="btn hide" id="btnPlaatsen" type="button">Plaatsen</button>
+        <button class="btn hide" id="btnWissen" type="button">Wissen</button>
+        <button class="btn hide" id="btnReplace" type="button">Vervangen</button>
+        <button class="btn hide" id="btnEinde" type="button">Einde</button>
+    </div>
+    <div id="spelregelsbtn">
+        <button class="btn hide" id="btnSpelregels" type="button">Toon spelregels</button>
+    </div>
+</div>
+    <div id="spelregels" class="hide">
+        <h3>Spelregels</h3>
+        <ul>
+            <li>De eerste speler legt een woord op het bord, beginnend bij het middenvak (de "Ster") en bewegend naar een richting van zijn of haar keuze. Diagonaal legg is verboden!</li>
+            <li>Na het eerste woord leggen, moeten alle daaropvolgende woorden minimaal één letter van een bestaand woord gebruiken.</li>
+            <li>Tegels kunnen horizontaal of verticaal worden geplaatst, maar niet diagonaal.</li>
+            <li>Een speler kan ervoor kiezen om één of meer letters te ruilen voor nieuwe letters uit de zak, Dit kost wel een beurt. </li>
+            <li>Het spel eindigt wanneer alle tegels op zijn en één speler al zijn tegels heeft gebruikt of wanneer alle spelers drie opeenvolgende beurten passen.</li>
+            <li>De speler met de meeste punten wint het spel! </li>
+        </ul>
+    </div>
+</main>
+    <footer>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

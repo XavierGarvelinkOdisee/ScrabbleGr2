@@ -1,0 +1,214 @@
+* {
+    font-family: roboto;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: #5E412F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10%;
+        color: #5E412F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    color: #5E412F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#login {
+    background-color: #FCEBB6;
+    border: 4px solid #F0A830;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 25px;
+    position: absolute;
+    top: 15%;
+    right: 35%;
+    width: 400px;
+}
+
+#players, #selectlangplayer {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 3px;
+}
+
+label {
+    padding:5px;
+}
+
+select {
+    padding: 3px;
+}
+
+table {
+    background-color: #FCEBB6;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate( -50%, -50%);
+}
+
+#Spelbord {
+    display: block;
+}
+
+table,
+td {
+    border: 2px solid black;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+}
+
+.cell,
+.cell2,
+.cell3,
+.cellStar {
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#btns{
+    margin-top: 25px;
+    display: flex;
+    flex-flow: column;
+    max-width: 100px;
+}
+
+.cell2 {
+    background-color: #78C0A8;
+}
+
+.cell3 {
+    background-color: #F07818;
+}
+
+.cellStar {
+    background-color: #F0A830;
+    font-size: 16px;
+}
+
+#login {
+    text-align: center;
+}
+
+#player-count {
+    font-size: 12px;
+}
+
+#letterlist a {
+    background-color: #FCEBB6;
+    padding: 5px;
+    margin-left: 5px;
+    border: 2px solid #5E412F;
+    border-radius: 3px;
+}
+
+#letterlist a:hover,
+#letterlist a:active {
+    background-color: #5E412F;
+    border: 2px solid #FCEBB6;
+    border-radius: 3px;
+    color: #FCEBB6;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 10px;
+}
+
+#btnStart {
+    background-color: rgb(50, 45, 45);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 80px; 
+    margin: 0 auto; 
+}
+
+#playerturn {
+    display:none;
+}
+
+#playerinfo {
+    margin-left: 5%;
+}
+
+#spelregels {
+    text-decoration: none;
+    border: 4px solid #F0A830;
+    background-color: #FCEBB6;
+    padding: 10px; 
+    border-radius: 6px;
+    width: 22%;
+    margin-left: 70%;
+    margin-top: -10%;
+}
+
+#spelregels li {
+    text-decoration: none;
+}
+
+#btnSpelregels {
+    margin: 20px;
+}
+
+#btnSpelregels:active,
+#btnSpelregels:hover {
+    border: 2px solid #F0A830;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    background-color: rgb(50, 45, 45);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    background-color: rgb(50, 45, 45);
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 80px; 
+    margin: 0 auto; 
+    margin-top: 2%;
+
+}
+#btnEinde {
+    float: left;
+}
+.btnShow {
+    display: block;
+    border: 2px solid #F0A830;
+}
+
+.activeBtn {
+    border: 2px solid #F0A830;
+}
