@@ -1,14 +1,3 @@
-/*
-    store geplaatste letters in een array
-    als het niet correct is => return geplaatste letters in player inventory
-                            => return bord waarden naar oude waarde
-    eventhandler knop wissen
-    call als woord incorrect is
-
-    end game knop
-        bepaald winnaar
-*/
-
 const players = []; // Array where created players are stored in.
 const playerspw = [];
 const selectPlayers = document.getElementById('player-count');
@@ -38,8 +27,6 @@ let CurrentLang;
 let PlayedTiles = [];
 let PlayedCells = [];
 
-
-const API_KEY = '';
 // Waarden van de letters bij de Nederlandse versie 
 const letterTilesNL = [
     { letter: "A", value: 1, frequency: 6 },
@@ -155,10 +142,8 @@ function handleCellClick(event) {
     const cell = event.target;
     // Als selectedTile waarde heeft...
     if (selectedTile) {
-        //PlayedTiles[PlayedTiles.length] = selectedTile;
         PlayedTiles.push(selectedTile.innerHTML);
         PlayedCells.push(cell);
-        //PlayedCells[PlayedCells.length] = cell;
 
         cell.removeEventListener('click', handleCellClick);
         currentPlayerLetters.splice(selectedTile.value, 1);
