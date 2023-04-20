@@ -280,7 +280,12 @@ function LoadPlayer(playerIndex) {
 function updatePlayerTurn(playerIndex) {
     divPlayerTurn.removeChild(divPlayerTurn.firstChild);
     let playerTurn = document.createElement('p');
-    playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name} punten: ${playerScores[playerIndex]}`;
+    if (playerScores[playerIndex] != undefined) {
+        playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name} punten: ${playerScores[playerIndex]}`;
+    } else {
+        playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name}`;
+    }
+    
     divPlayerTurn.appendChild(playerTurn);
 }
 
