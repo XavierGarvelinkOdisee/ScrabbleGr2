@@ -117,7 +117,6 @@ function distributeLetterTilesToPlayer(letterTiles, index) {
       playerTiles.push(selectedTile);
       selectedTile.frequency--;
     }
-    console.log(playerTiles);
     return playerTiles;
 }
 
@@ -158,7 +157,6 @@ function handleCellClick(event) {
     if (selectedTile) {
         //PlayedTiles[PlayedTiles.length] = selectedTile;
         PlayedTiles.push(selectedTile.innerHTML);
-        console.log(selectedTile);
         PlayedCells.push(cell);
         //PlayedCells[PlayedCells.length] = cell;
 
@@ -202,8 +200,6 @@ function scrabbleScore() {
         newAlphabet = { A: 1, B: 3, C: 3, D: 2, E: 1, F: 4, G: 2, H: 4, I: 1, J: 8, K: 10, L: 1, M: 2, N: 1, O: 1, P: 3, Q: 8, R: 1, S: 1, T: 1, U: 1, V: 4, W: 10, X: 10, Y: 10, Z: 10 };
     }       
     sum = 0;
-    console.log('trigger'); 
-        console.log(PlayedTiles); 
     for (let i = 0; i < PlayedTiles.length; i++) {
           
         if (PlayedCells[i].className == 'cell2') {
@@ -281,7 +277,7 @@ function updatePlayerTurn(playerIndex) {
     divPlayerTurn.removeChild(divPlayerTurn.firstChild);
     let playerTurn = document.createElement('p');
     if (playerScores[playerIndex] != undefined) {
-        playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name} punten: ${playerScores[playerIndex]}`;
+        playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name} - punten: ${playerScores[playerIndex]}`;
     } else {
         playerTurn.textContent = `Player: ${playerIndex + 1} - ${players[playerIndex].name}`;
     }
@@ -325,7 +321,6 @@ async function checkTextFile(searchText) {
     
         const response = await fetch(woordlist);
         const data = await response.text();
-        console.log(data.split('\n'));
         const words = data.split('\n');
 
         // chatGPT gebruikt om wildcard te laten werken
@@ -406,11 +401,9 @@ async function checkWord() {
         const CellEersteRightLet = document.querySelector(`#${getAdjacentCoordinates(eersteletter.id)[1]}`);
         if (CellEersteRightLet.innerHTML != '') {
             Word = HorWordCheck();
-            console.log('horword '+ Word);
         }
         else{
             Word = VerWordCheck();
-            console.log('verword '+ Word);
         }
     }
     Word = Word.toLowerCase();
@@ -423,9 +416,7 @@ async function checkWord() {
         }
         PlayedCells = [];
         PlayedTiles = [];
-        
-        console.log('spelerscore is nu: ' + playerScores[currentPlayerIndex]);
-    } else {
+        } else {
         console.log('Het woord is incorrect.');
     }
 }
